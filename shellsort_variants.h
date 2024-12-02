@@ -8,6 +8,7 @@
 #include <vector>
 #include <cmath>
 
+//from the textbook
 template<class T>
 void Shellsort_9_8(T data[], int n) {
     int i, h;
@@ -44,8 +45,9 @@ void Shellsort_9_8(T data[], int n) {
     }
 }
 
+//h=2k−1h=2k−1
 template<class T>
-void Shellsort_variant_b(T data[], int n) {
+void Shellsort_b(T data[], int n) {
     int i, j, k, hCnt, h;
     std::vector<int> increments;
 
@@ -69,8 +71,9 @@ void Shellsort_variant_b(T data[], int n) {
     }
 }
 
+// h1=1,h=2k+1h1​=1,h=2k+1
 template<class T>
-void Shellsort_variant_c(T data[], int n) {
+void Shellsort_c(T data[], int n) {
     int i, j, k, hCnt, h;
     std::vector<int> increments;
 
@@ -95,8 +98,9 @@ void Shellsort_variant_c(T data[], int n) {
     }
 }
 
+//Fibonacci sequence
 template<class T>
-void Shellsort_variant_d(T data[], int n) {
+void Shellsort_d(T data[], int n) {
     int i, j, k, hCnt, h;
     std::vector<int> increments;
 
@@ -124,8 +128,9 @@ void Shellsort_variant_d(T data[], int n) {
     }
 }
 
+// h1=n/2,hi=⌊0.75⋅hi+1⌋h1​=n/2,hi​=⌊0.75⋅hi+1​⌋
 template<class T>
-void Shellsort_variant_e(T data[], int n) {
+void Shellsort_e(T data[], int n) {
     int i, j, k, hCnt, h;
     std::vector<int> increments;
     // Generate gap sequence: h1 = n/2, hi = floor(0.75 * hi+1)
