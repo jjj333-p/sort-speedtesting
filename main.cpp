@@ -410,6 +410,54 @@ int main() {
                     end_shellsort_c_200k - start_shellsort_c_200k).count()
                 << " microseconds.\n";
 
+
+        std::cout << "\nSorting arrays with the shellsort implementation d...\n";
+        // 20 item array with Shellsort_d
+        const auto start_shellsort_d_20 = std::chrono::high_resolution_clock::now();
+        Shellsort_d(ss_d_arr20, 20);
+        const auto end_shellsort_d_20 = std::chrono::high_resolution_clock::now();
+        std::cout << "\t• Sorted 20 item test array in "
+                << std::chrono::duration_cast<std::chrono::microseconds>(
+                    end_shellsort_d_20 - start_shellsort_d_20).count()
+                << " microseconds, with result\n\t\t[ ";
+        for (int i = 0; i < 20; i++) {
+            std::cout << ss_d_arr20[i] << ", ";
+        }
+        std::cout << "]\n";
+        // 10k item array with Shellsort_d
+        const auto start_shellsort_d_10k = std::chrono::high_resolution_clock::now();
+        Shellsort_d(ss_d_arr10k, 10000);
+        const auto end_shellsort_d_10k = std::chrono::high_resolution_clock::now();
+        std::cout << "\t• Sorted 10k item array in "
+                << std::chrono::duration_cast<std::chrono::microseconds>(
+                    end_shellsort_d_10k - start_shellsort_d_10k).count()
+                << " microseconds.\n";
+        // 50k item array with Shellsort_d
+        const auto start_shellsort_d_50k = std::chrono::high_resolution_clock::now();
+        Shellsort_d(ss_d_arr50k, 50000);
+        const auto end_shellsort_d_50k = std::chrono::high_resolution_clock::now();
+        std::cout << "\t• Sorted 50k item array in "
+                << std::chrono::duration_cast<std::chrono::microseconds>(
+                    end_shellsort_d_50k - start_shellsort_d_50k).count()
+                << " microseconds.\n";
+        // 150k item array with Shellsort_d
+        const auto start_shellsort_d_150k = std::chrono::high_resolution_clock::now();
+        Shellsort_d(ss_d_arr150k, 150000);
+        const auto end_shellsort_d_150k = std::chrono::high_resolution_clock::now();
+        std::cout << "\t• Sorted 150k item array in "
+                << std::chrono::duration_cast<std::chrono::microseconds>(
+                    end_shellsort_d_150k - start_shellsort_d_150k).count()
+                << " microseconds.\n";
+        // 200k item array with Shellsort_d
+        const auto start_shellsort_d_200k = std::chrono::high_resolution_clock::now();
+
+        Shellsort_d(ss_d_arr200k, 200000);
+        const auto end_shellsort_d_200k = std::chrono::high_resolution_clock::now();
+        std::cout << "\t• Sorted 200k item array in "
+                << std::chrono::duration_cast<std::chrono::microseconds>(
+                    end_shellsort_d_200k - start_shellsort_d_200k).count()
+                << " microseconds.\n";
+
         //pretty formatting
         std::cout << std::endl;
         for (int _dash = 0; _dash < 150; _dash++) {

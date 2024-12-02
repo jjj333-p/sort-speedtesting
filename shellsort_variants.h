@@ -71,15 +71,16 @@ void Shellsort_b(T data[], int n) {
     }
 }
 
-// h1=1,h=2k+1h1​=1,h=2k+1
+// h1=1,h=2k+1h1=1,h=2k+1
 template<class T>
 void Shellsort_c(T data[], int n) {
-    int i, j, k, hCnt, h;
+    if (n <= 1) return; // Early exit for edge cases
+
+    int i, j, hCnt, h;
     std::vector<int> increments;
 
-    // Generate gap sequence: h = 2k + 1
-    increments.push_back(1); // Start with h1 = 1
-    for (int k = 1; (h = 2 * k + 1) < n; k++) {
+    // Generate gap sequence: h = 2k + 1 for k >= 0
+    for (int k = 0, h = 1; h < n; ++k, h = 2 * k + 1) {
         increments.push_back(h);
     }
 
@@ -88,7 +89,7 @@ void Shellsort_c(T data[], int n) {
         h = *it;
 
         // Perform h-sorting using insertion sort
-        for (hCnt = h; hCnt < n; hCnt++) {
+        for (hCnt = h; hCnt < n; ++hCnt) {
             T tmp = data[hCnt];
             for (j = hCnt; j >= h && data[j - h] > tmp; j -= h) {
                 data[j] = data[j - h];
@@ -97,6 +98,7 @@ void Shellsort_c(T data[], int n) {
         }
     }
 }
+
 
 //Fibonacci sequence
 template<class T>
@@ -128,7 +130,7 @@ void Shellsort_d(T data[], int n) {
     }
 }
 
-// h1=n/2,hi=⌊0.75⋅hi+1⌋h1​=n/2,hi​=⌊0.75⋅hi+1​⌋
+// h1=n/2,hi=⌊0.75⋅hi+1⌋h1=n/2,hi=⌊0.75⋅hi+1⌋
 template<class T>
 void Shellsort_e(T data[], int n) {
     int i, j, k, hCnt, h;
