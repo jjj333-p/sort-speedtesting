@@ -60,6 +60,10 @@ int main() {
         auto *qs_rand_arr50k = new long int[50000];
         auto *qs_median_pivot_arr50k = new long int[50000];
         auto *ss_98_arr50k = new long int[50000];
+        auto *ss_b_arr50k = new long int[50000];
+        auto *ss_c_arr50k = new long int[50000];
+        auto *ss_d_arr50k = new long int[50000];
+        auto *ss_e_arr50k = new long int[50000];
         for (long int i = 0, j = 0; i < 50000; i++) {
             j = random() % 50000;
             if (i < 5) std::cout << j << ", ";
@@ -67,6 +71,10 @@ int main() {
             qs_rand_arr50k[i] = j;
             qs_median_pivot_arr50k[i] = j;
             ss_98_arr50k[i] = j;
+            ss_b_arr50k[i] = j;
+            ss_c_arr50k[i] = j;
+            ss_d_arr50k[i] = j;
+            ss_e_arr50k[i] = j;
         }
         std::cout << "...]\n";
 
@@ -75,6 +83,10 @@ int main() {
         auto *qs_rand_arr150k = new long int[150000];
         auto *qs_median_pivot_arr150k = new long int[150000];
         auto *ss_98_arr150k = new long int[150000];
+        auto *ss_b_arr150k = new long int[150000];
+        auto *ss_c_arr150k = new long int[150000];
+        auto *ss_d_arr150k = new long int[150000];
+        auto *ss_e_arr150k = new long int[150000];
         for (long int i = 0, j = 0; i < 150000; i++) {
             j = random() % 500000;
             if (i < 5) std::cout << j << ", ";
@@ -82,6 +94,10 @@ int main() {
             qs_rand_arr150k[i] = j;
             qs_median_pivot_arr150k[i] = j;
             ss_98_arr150k[i] = j;
+            ss_b_arr150k[i] = j;
+            ss_c_arr150k[i] = j;
+            ss_d_arr150k[i] = j;
+            ss_e_arr150k[i] = j;
         }
         std::cout << "...]\n";
 
@@ -90,6 +106,10 @@ int main() {
         auto *qs_rand_arr200k = new long int[200000];
         auto *qs_median_pivot_arr200k = new long int[200000];
         auto *ss_98_arr200k = new long int[200000];
+        auto *ss_b_arr200k = new long int[200000];
+        auto *ss_c_arr200k = new long int[200000];
+        auto *ss_d_arr200k = new long int[200000];
+        auto *ss_e_arr200k = new long int[200000];
         for (long int i = 0, j = 0; i < 200000; i++) {
             j = random() % 500000;
             if (i < 5) std::cout << j << ", ";
@@ -97,6 +117,10 @@ int main() {
             qs_rand_arr200k[i] = j;
             qs_median_pivot_arr200k[i] = j;
             ss_98_arr200k[i] = j;
+            ss_b_arr200k[i] = j;
+            ss_c_arr200k[i] = j;
+            ss_d_arr200k[i] = j;
+            ss_e_arr200k[i] = j;
         }
         std::cout << "...]\n";
 
